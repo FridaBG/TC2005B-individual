@@ -57,3 +57,10 @@ let cantidad_tacos =  () => {
 }
 
 console.log(cantidad_tacos());
+
+
+//html dinámico con eventos
+
+let boton = document.getElementById("buenos_dias")
+boton.innerHTML =  "Buenos días"; //Permite escribir el HTML que hay dentro del elemento 
+boton.onclick = () => alert("BUEEENOS DÍAAAASS") //tiene una función anónima para que no se ejecute luego luego hasta que piques el botón
