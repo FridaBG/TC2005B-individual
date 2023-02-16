@@ -85,5 +85,27 @@ for (let elemento in arreglo) {
 }
 
 for (let valor of arreglo) {
-    console.log(valor)   // me devuelve los valore del arreglo 
+    console.log(valor)   // me devuelve los valores del arreglo 
 }
+
+
+//objetos 
+
+let objeto = {
+    atributo_1 : "valor 1",
+    atributo_2 : 2
+}
+
+console.log(objeto);
+
+for (let elemento in objeto) {
+    console.log(elemento)   // me devuelve la lista de atributos 
+}
+
+ console.log(objeto.atributo_1) // me devuelve los valores de los atributos del objeto 
+ console.log(objeto.atributo_2)
+
+ //arreglos de objeto 
+
+ const arreglo_de_objeto = [{atributo1:"valor0", atributo2: 1},{}, objeto]
+ console.log(arreglo_de_objeto); // INvestigar más sobre arreglo de objetos
