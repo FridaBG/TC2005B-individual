@@ -64,3 +64,26 @@ console.log(cantidad_tacos());
 let boton = document.getElementById("buenos_dias")
 boton.innerHTML =  "Buenos días"; //Permite escribir el HTML que hay dentro del elemento 
 boton.onclick = () => alert("BUEEENOS DÍAAAASS") //tiene una función anónima para que no se ejecute luego luego hasta que piques el botón
+
+// arreglos 
+const arreglo = ["Elemento"];
+console.log(arreglo);
+
+arreglo.push("Otro elemento"); //agregar otro elemento al arreglo 
+console.log(arreglo);
+
+arreglo["dos"] = 2; //agregar una localidad llamada dos con valor de 2, otra manera de agregar un arreglo para nombrar el índice o las llaves
+arreglo.length = 10; //agregar espacios vacíos a un arreglo 
+arreglo[20] = "Fin del arreglo"; // va a agregar 10 luhgares mas para que sean 20 
+
+console.log(arreglo);
+
+//recorrer arreglos 
+
+for (let elemento in arreglo) {
+    console.log(elemento)   // me devuelve el ínidice del elemento del arreglo 
+}
+
+for (let valor of arreglo) {
+    console.log(valor)   // me devuelve los valore del arreglo 
+}
