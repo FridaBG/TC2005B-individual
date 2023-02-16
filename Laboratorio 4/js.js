@@ -35,11 +35,25 @@ for (let j = 1; j <= 10; j++){  //"let" no se puede puede imprimir feura de su c
 alert("hola");
 
 let nombre = prompt("Cómo te llamas?")
-console.log("Hola " + nombre);
+console.log("Hola " + nombre); //imprimier en la consola
 
 let hambre = confirm("Tienes hambre?");
-console.log(hambre);
+console.log(hambre); //imprimir en la consola
 
 
+// funciones tradicionales
+function numero_tacos(){
+    return 5;
+}
+
+console.log(numero_tacos());
 
 
+//funciones modernas
+() => {} //función anónima
+
+let cantidad_tacos =  () => {
+    return 5;
+}
+
+console.log(cantidad_tacos());
