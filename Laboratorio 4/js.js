@@ -1,7 +1,10 @@
 
 var comida = "chilaquiles";  //variable se clara con var o let
+
 let cena = "tacos"; //vamos a usar mas este tipo de variable 
+
 let precioVariable = 70;  //se puede modificar la variable desde al consola de inspeccionar
+
 const precio = 70;  //con este no se puede modificar desde la consola
 
 
@@ -12,6 +15,31 @@ console.error("Te dije que el precio no se puede modificar") //imprimir mensajes
 
 console.assert(1 === 1); //expresión lógica para hacer pruebas automáticas del código 
 console.assert(1 === "1"); //va a marcar error
-console.assert(1 == "1");
-console.assert(1 == true);
-console.assert(1 === true);
+console.assert(1 == "1"); //correcto
+console.assert(1 == true); //correcto
+console.assert(1 === true); //va a marcar error
+
+//alcance de variables 
+for (var i = 1; i <= 10; i++){ //"var" tiene alcance en toda la función, no es tan bueno usar bar porque se puede controlar fuera de la función
+    console.log(i);
+}
+console.log(i);
+
+for (let j = 1; j <= 10; j++){  //"let" no se puede puede imprimir feura de su cicilo
+    console.log(j);
+}
+
+
+//alter, promt, confirm
+
+alert("hola");
+
+let nombre = prompt("Cómo te llamas?")
+console.log("Hola " + nombre);
+
+let hambre = confirm("Tienes hambre?");
+console.log(hambre);
+
+
+
+
