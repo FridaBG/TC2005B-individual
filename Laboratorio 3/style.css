@@ -210,3 +210,21 @@ body{
     right:200px;
     bottom: 150px;
   }
+
+.preguntas{
+    color: #2c5cbd;
+    font-family: 'Quicksand', sans-serif;
+    padding: .5%;
+}
+
+.ocean-preguntas{
+    margin-top: 2%;
+    background-color: #3754bc;
+    margin: 0;
+}
+
+.respuestas{
+    color: #eaeef7;
+    font-family: 'Quicksand', sans-serif;
+    padding: .8%;
+}
