@@ -4,177 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas</title>
+    <link rel="stylesheet" href="foundation.css">
+    <link rel="stylesheet" href="app.css">
+    <title>Preguntas Laboratorio 5</title>
 </head>
 <body>
-    
+
+    <header>
+        <h2>Pregunta de Laboratorio 5</h2>
+    </header>
+
+    <div>
+        <p style="padding: 2% 10%; text-align: center;">Foundation es un framework front-end que permite a los desarrolladores construir interfaces de usuario para la web y aplicaciones móviles.
+         El framework ha incorporado elementos de diseño de Material Design de Google en su biblioteca de componentes, lo que permite
+         que las interfaces construidas con Foundation sigan las pautas y principios de diseño de Material Design. A continuación, se 
+         describen algunos de los elementos y características de Material Design de Foundation:</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+              <h4>Tipografía</h4>
+                <p>Material Design se basa en una tipografía clara y legible. 
+                    Foundation incluye una variedad de fuentes que se pueden 
+                    usar para crear una jerarquía visual clara en el contenido.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+              <h4>This is a row of cards.</h4>
+                <p>This row of cards is embedded in an X-Y Block Grid.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="card">
+              <img src="assets/img/generic/rectangle-1.jpg">
+              <div class="card-section">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
 </body>
 </html>
-<h1>Preguntas lab</h1>
-        <ol>
-
-            <li> <details>
-                 <summary> ¿Cuál es la diferencia entre Internet y la World Wide Web? </summary>
-                <p>Internet -> red de computadoras alrededor de todo el mundo conectadas entre sí.
-                    La web (World Wide Web) ->  colección de páginas que se asienta sobre esa red de computadoras.
-                    Así que cuando navegas a través de tu celular o computadora usas <strong>internet para acceder a la web.</strong> </p>
-              </details> </li>
-
-
-              <li> <details>
-                <summary> ¿Cuáles son las partes de un URL?</summary>
-               <p> 
-                <ul> 
-                <li> Protocolo HTTPS </li>
-                <li> Subdominio</li>
-                <li> Dominio </li>
-                <li> TLD </li>
-                <li> Ruta </li>
-                <li> Parámetro </li>
-               <li> Etiqueta </li>
-                </ul> </p>
-                <img src="https://superadmin.es/blog/img/posts/estructura-url.png" alt="imagen representativa de las partes de un URL">
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</summary>
-                <p> 
-                <ul> 
-                <li> GET: solicita una representación de un recurso específico, recuperar datos. </li>
-                <li> HEAD: pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.</li>
-                <li> POST: se utiliza para enviar una entidad a un recurso en específico. Cambia el servidor. </li>
-                <li> PUT:  reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición. </li>
-                <li> PATCH:  aplica modificaciones parciales a un recurso. </li>
-                <li> DELETE: borra un recurso en específico. </li>
-     
-                </ul> </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</summary>
-               <p> se utiliza el método HTTP <strong> "POST"  </strong>. Este método envía los datos del formulario en el cuerpo de la solicitud HTTP, 
-                lo que significa que los datos son "enviados" al servidor para su procesamiento.  </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL? </summary>
-               <p> se utiliza el método HTTP  <strong> "GET" </strong> pues  es adecuado para acceder a páginas web y recuperar información estática </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</summary>
-               <p> Este código significa <strong> "ÉXITO" </strong> por lo que no es un código que nos indique algún error. </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué? </summary>
-               <p> El error 404 se produce cuando un usuario intenta acceder a una página que no existe o no está disponible en el servidor. Por lo que si es responsabilidad
-                del desarrollador corregirlo, pues esto puede ser causado por imagenes o archivos eliminados, que haya problemas de conexión o que el nombre del dominio haya cambiado.</p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué? </summary>
-               <p> El error 500 es un error interno del servidor y significa que el servidor no pudo procesar correctamente la solicitud del usuario debido a un problema en el lado del servidor,
-                por lo que si es responsabilidad del desarrollador corregirlo </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados. </summary>
-               <p> significa que su uso no es recomendado o se espera que sea reemplazado por una alternativa más moderna. 
-
-                 <ul>
-                <li> La etiqueta "frame": en HTML4, se utilizaba la etiqueta "frame" para crear un marco dentro de una página web. En HTML5, esta etiqueta ha sido desaprobada y se recomienda utilizar "iframe". </li>
-                <li> Atributos de presentación: en HTML4, los atributos de presentación, como "align", "bgcolor" y "width", se utilizaban para controlar el aspecto de los elementos de una página. En HTML5, estos atributos están desaprobados y se recomienda utilizar CSS.</li>
-                <li> Atributo "target": en HTML4, el atributo "target" se utilizaba para controlar dónde se abría un enlace. En HTML5, este atributo ha sido desaprobado y se recomienda utilizar "rel". </li>
-                <li>La etiqueta "font": en HTML4, la etiqueta "font" se utilizaba para controlar la apariencia de la fuente. En HTML5, esta etiqueta ha sido desaprobada y se recomienda utilizar CSS en su lugar.</li>
-                </ul>
-
-            </p>
-             </details> 
-
-
-             <li> <details>
-                <summary> ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</summary>
-               <p> 
-
-                <ol>
-                <li> Semántica: HTML5 introduce nuevos elementos y atributos con un enfoque en la semántica, lo que permite a los desarrolladores describir de manera más precisa y accesible el contenido y la estructura de una página. </li>
-                <li> Multimedia: HTML5 permite la incorporación de elementos multimedia como audio, video y animaciones sin la necesidad de plugins externos, como Flash.</li>
-                <li>Formularios: HTML5 agrega nuevos tipos de controles para formularios, como fechas, números y correos electrónicos, que mejoran la experiencia de usuario y simplifican el procesamiento de formularios por parte del servidor.</li>
-                <li>Aplicaciones en línea: HTML5 permite la creación de aplicaciones en línea sin necesidad de plugins externos, lo que mejora la compatibilidad, el rendimiento y la seguridad.</li>
-                <li> Elementos depreciados: HTML5 desaprueba algunos elementos y atributos de HTML4 que ya no son necesarios o no se utilizan con frecuencia, como "frame", "font" y "target".</li>
-                <li>Mejor rendimiento: HTML5 es más eficiente y rápido que HTML4, lo que mejora la experiencia de usuario y la accesibilidad de la página.</li>
-                </ol>
-
-               </p>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Qué componentes de estructura y estilo tiene una tabla?  </summary>
-                <p> table "table", table row "tr", table data "td" </p>
-                <table border="1px">
-                    <tr> 
-                        <td> ejemplo </td>
-                        <td> ejemplo </td>
-                   </tr>
-                   <tr> 
-                         <td> tabla </td>
-                         <td> tabla </td>
-                    </tr>
-                </table>
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Cuáles son los principales controles de una forma HTML5? </summary>
-                <p> 
-                <ol>
-                    <li>Input (entrada de texto)</li>
-                    <li>Checkbox (casilla de verificación)</li>
-                    <li>Radio button (botón de radio)</li>
-                    <li>Select (menú desplegable)</li>
-                    <li>Textarea (área de texto)</li>
-                    <li>Button (botón)</li>
-                    <li>Range (rango)</li>
-                    <li>Date/time (fecha/hora)</li>
-                    <li>Color picker (selector de color)</li>
-                    <li>Email (correo electrónico)</li>
-                    <li>Number (número)</li>
-                    <li>Password (contraseña)</li>
-                    <li>Search (búsqueda)</li>
-                    <li>Tel (teléfono)</li>
-                    <li>URL (dirección web)</li>
-                </ol>
-            </p>
-
-             </details> </li>
-
-             <li> <details>
-                <summary> ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? </summary>
-               <p>  Chrome es un navegador altamente compatible con HTML5  </p>
-             </details> </li>
-
-
-             <li> <details>
-                <summary> Sobre el ciclo de vida y desarrollo de los sistemas de información:
-                    ¿Cuál es el ciclo de vida de los sistemas de información?
-                    ¿Cuál es el ciclo de desarrollo de sistemas de información? </summary>
-               <p> El ciclo de vida de los sistemas de información es el proceso que describe las etapas por las que pasa un sistema de información, desde su concepción hasta su obsolescencia y retirada. Generalmente se compone de las siguientes etapas: planificación, análisis, diseño, implementación y mantenimiento.
-
-                El ciclo de desarrollo de sistemas de información es un modelo que describe las fases que se siguen en la creación de un sistema de información, desde la identificación de las necesidades del usuario hasta la implementación del sistema. Los modelos más comunes son el modelo en cascada, el modelo en espiral y el modelo de desarrollo ágil. </p>
-             </details> </li>
-
-
-        </ol>
-
-        <hr>
-    <footer>
-        <h4> fuenes utilizadas </h4>
-        <p>  https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web. </p>
-        <p> https://edytapukocz.com/url-partes-ejemplos-facil/ </p>
-        <p> https://developer.mozilla.org/es/docs/Web/HTTP/Methods </p>
-        <p>  https://www.ionos.es/digitalguide/paginas-web/creacion-de-paginas-web/que-significa-el-error-404-not-found/ </p>
-        <p>  https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash. </p>
-        <p> https://www.muycomputer.com/2009/06/08/actualidadnoticiaschrome-da-soporte-a-html-5_we9erk2xxdbcyctchncujgwohmqtdb-wsmm81mcpvm2q1itnptr9y9qxapytow9a/ </p>
-        </p>
-    
-    </footer>
