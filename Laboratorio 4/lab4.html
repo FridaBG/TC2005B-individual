@@ -4,9 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>laboratorio 4</title>
 </head>
 <body>
+    <h3>Preguntas Laboratorio 4</h3>
+
+    <ol>
+        <li>
+            <details>
+            <summary>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</summary>
+            <p> Java y JavaScript son dos lenguajes de programación que tienen algunas similitudes, pero también algunas diferencias importantes.
+
+                <table border="10px">
+                    <th>semejanzas</th>
+                    <td>Ambos son lenguajes orientados a objetos, ambos se ejecutan en entornos de tiempo de ejecución
+                         (JVM para Java y el navegador para JavaScript), y ambos utilizan sintaxis similar a C.</td>
+                </table>
+
+                <table border="10px">
+                    <th>diferencias</th>
+                    <td>Java es un lenguaje de programación de propósito general que se utiliza principalmente para desarrollar
+                         aplicaciones empresariales y de escritorio, mientras que JavaScript es un lenguaje de programación de 
+                         scripts que se utiliza principalmente para crear aplicaciones web interactivas. Java requiere que el 
+                         código sea compilado antes de que se pueda ejecutar, mientras que JavaScript es un lenguaje interpretado. 
+                         Java es un lenguaje estáticamente tipado, lo que significa que se deben declarar los tipos de datos de las 
+                         variables, mientras que JavaScript es un lenguaje dinámicamente tipado.</td>
+                </table>
+            </p>
+            </details>
+        </li>
+
+        <li>
+            <details>
+            <summary>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</summary>
+            <p>El objeto Date en JavaScript tiene varios métodos que se pueden utilizar para obtener y establecer diferentes valores de fecha y hora.
+                Algunos de los métodos más comunes incluyen:
+                <ul>
+                    <li>getFullYear(): devuelve el año de la fecha.</li>
+                    <li>getMonth(): devuelve el mes de la fecha (0-11).</li>
+                    <li>getDate(): devuelve el día del mes de la fecha (1-31).</li>
+                    <li>getDay(): devuelve el día de la semana de la fecha (0-6).</li>
+                    <li>getTime(): devuelve el tiempo transcurrido desde el 1 de enero de 1970 en milisegundos.</li>
+                  </ul>
+            </p>
+            </details>
+        </li>
+
+        <li>
+            <details>
+            <summary>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</summary>
+            <p>En JavaScript, los arreglos tienen varios métodos que se pueden utilizar para realizar diferentes operaciones. 
+                Algunos de los métodos más comunes incluyen:
+                <ul>
+                    <li>push(): agrega uno o más elementos al final del arreglo.</li>
+                    <li>pop(): elimina y devuelve el último elemento del arreglo.</li>
+                    <li>shift(): elimina y devuelve el primer elemento del arreglo.</li>
+                    <li>unshift(): agrega uno o más elementos al inicio del arreglo.</li>
+                    <li>splice(): agrega o elimina elementos del arreglo en una posición específica.</li>
+                  </ul>
+
+            </p>
+            </details>
+        </li>
+
+        <li>
+            <details>
+            <summary>¿Cómo se declara una variable con alcance local dentro de una función?</summary>
+            <p>En JavaScript, las variables se pueden declarar utilizando las palabras clave var, let o const. Para declarar una variable 
+                con alcance local dentro de una función, se puede utilizar cualquiera de estas palabras clave, seguida del nombre de la
+                 variable y, opcionalmente, su valor inicial.  
+            </p>
+            </details>
+        </li>
+
+        <li>
+            <details>
+            <summary>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</summary>
+            <p>El uso de variables globales dentro de funciones puede tener varias implicaciones negativas. Se considera 
+                una buena práctica evitar el uso de variables globales siempre que sea posible. Algunas de las implicaciones
+                 de utilizar variables globales dentro de funciones son:
+                 <ul>
+                    <li>Dificultad para rastrear el flujo de datos: Al utilizar variables globales dentro de una función, es más difícil 
+                        rastrear el flujo de datos y determinar qué parte del código está modificando la variable global. Esto puede dificultar
+                        la resolución de errores y la depuración del código.</li>
+                    <li>Colisiones de nombres: Si el mismo nombre de variable global se utiliza en varias funciones, puede haber colisiones 
+                        de nombres que pueden afectar el resultado final del código.</li>
+                    <li>Acoplamiento de código: Las variables globales pueden hacer que el código esté más acoplado, lo que significa que las 
+                        diferentes partes del código dependen demasiado unas de otras. Esto hace que el código sea más difícil de mantener y actualizar en el futuro.</li>
+                    <li>Cambios inesperados en el estado del programa: Si una función modifica una variable global, esto puede afectar el estado 
+                        del programa de maneras que no se esperan. Esto puede hacer que sea difícil entender y depurar el código, especialmente si 
+                        hay múltiples funciones que están modificando la misma variable global.</li>
+                  </ul>
+            </p>
+            </details>
+        </li>
+
+
+
+
+
+    </ol>
     <script src="lab4.js"></script>
+
 </body>
 </html>

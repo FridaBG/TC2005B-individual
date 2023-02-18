@@ -4,7 +4,7 @@
 
 const num = prompt("Ingrese un número");
 
-document.write("<table  border=1px>");
+document.write(" <h3>Ejercicio 1</h3> <br> <table  border=1px>");
 document.write("<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>");
 
 for (let i = 1; i <= num; i++) {
@@ -35,10 +35,10 @@ const tiempoTotal = (tiempoFinal - tiempoInicio) / 1000;
 
 if (respuesta == resultado) {
  
-  document.write(" <br> La respuesta es correcta y tardaste "  + tiempoTotal + " segundos.");
+  document.write("  <h3>Ejercicio 2</h3> <br> La respuesta es correcta y tardaste "  + tiempoTotal + " segundos.");
 } else {
 
-  document.write(" <br> La respuesta es incorrecta y yardaste " + tiempoTotal + "segundos.");
+  document.write(" <h3>Ejercicio 2</h3> <br> La respuesta es incorrecta y tardaste " + tiempoTotal + "segundos.");
 }
 
 
@@ -69,7 +69,7 @@ function contador(arreglo){
         // me devuelve los valores del arreglo 
     }
 
-    document.write("<br> La cantidad de números negativos es " + numNegativo + ", la cantidad de ceros es " + cero + " y la cantidad de positivos es " + numPositivo  + "." );
+    document.write("<br> <h3>Ejercicio 3</h3> <br> La cantidad de números negativos es " + numNegativo + ", la cantidad de ceros es " + cero + " y la cantidad de positivos es " + numPositivo  + "." );
    
 }
 
@@ -82,26 +82,27 @@ console.log(contador(arr));
 //Parámetros: Un arreglo de arreglos de números. 
 //Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
 
-/*function promedios(matriz){
-
-    for (x = 0 ; x<matriz.length; x++) {
-
-        for (y = 0; y<matriz[x].length; y++) {
-            y ¡
-        }
-        console.log(text)
+function promedios(matriz) {
+    const promediosArr = [];
+    for (let i = 0; i < matriz.length; i++) {
+      let suma = 0;
+      for (let j = 0; j < matriz[i].length; j++) {
+        suma += matriz[i][j];
+      }
+      promediosArr.push(suma / matriz[i].length);
     }
+    document.write(" <h3>Ejercicio 4</h3> <br> Los promedios son: " + promediosArr);
 }
 
-const calif = [[1,2,3],[4,5,6],[7,8,9]];
-console.log(promedios(calif));*/
+const calif = [[99,100,80],[78,95,85],[100,100,100]];
+console.log(promedios(calif));
 
 
 //5- Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.
 
 function inverso(num){
    const num_invertido = num.toString().split("").reverse().join("");
-   document.write("<br> El número invertido es " + num_invertido + ".")
+   document.write("<br><h3>Ejercicio 5</h3><br> El número invertido es " + num_invertido + ".")
 }
 
 let numero = 123;
@@ -111,20 +112,31 @@ console.log(inverso(numero));
 //hayas resuelto en otro lenguaje, un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML,
 // y la solución implementada en JavaScript, utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra los resultados en el documento HTML.
 
-function Hipotenusa(catetoAdyacente, catetoOpuesto) {
-    this.catetoAdyacente = catetoAdyacente;
-    this.catetoOpuesto = catetoOpuesto;
+document.write("<br><h3>Ejercicio 6</h3><br>");
 
-    // Método para calcular la hipotenusa
-    this.calcular = function() {
-        return Math.sqrt(Math.pow(this.catetoAdyacente, 2) + Math.pow(this.catetoOpuesto, 2));
-    }
-
-    // Método para imprimir el resultado
-    this.imprimirResultado = function() {
-        var resultado = document.getElementById("resultado");
-        resultado.innerHTML = "La hipotenusa es: " + this.calcular();
-    }
-}
-
-
+function Personaje(nombre, vida, posicion) { //Objeto personaje
+    this.nombre = nombre;
+    this.vida = vida;
+    this.posicion = posicion;
+ 
+    this.saltar = function() {     // Método 1
+      document.write(this.nombre + " está saltando");
+    };
+  
+    this.avanzar = function(distancia) { // Método 2
+      this.posicion += distancia;
+      document.write("<br>" + this.nombre + " avanzó " + distancia + " unidades, su posición actual es: " + this.posicion);
+    };
+  }
+  
+  const Frida = new Personaje("Frida", 100, 0);   // Constructor personaje
+  
+  // Llamar a los métodos del personaje
+Frida.saltar(); // Imprime "Mario está saltando"
+Frida.avanzar(10); // Imprime "Mario ha avanzado 10 unidades. Nueva posición: 10"
+  
+  
+  
+  
+  
+  
