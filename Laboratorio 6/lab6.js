@@ -105,3 +105,4 @@ function TotalPrice3() {
     tax3.innerHTML = TotalTax3;
 }
 
+
