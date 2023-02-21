@@ -81,7 +81,6 @@ function TotalPrice1() {
 }
 
 
-
 function TotalPrice2() {
     let price2 = document.getElementById("price2");
     let tax2 = document.getElementById("tax2");
