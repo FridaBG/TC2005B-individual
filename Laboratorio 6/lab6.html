@@ -4,80 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href="images/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="foundation.css">
-    <link rel="stylesheet" href="app.css">
-    <title>Laboratorio 5</title>
+
+    <title>Laboratorio 6</title>
 </head>
 
-<body>
+<style>
+    .menu{
+        margin-right: 1rem;
+        color: black;
+    }
 
-    <div class="top-bar" >
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Sitio Personal</li>
-            <li>
-              <a href="https://github.com/FridaBG2002/TC2005B-individual">GitHub</a>
-            </li>
-            <li><a href="https://www.youtube.com/watch?v=oNdc5ZCuhjQ">YouTube </a></li>
-            <li><a href="https://matias.ma/nsfw/">Random </a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
-          </ul>
+</style>
+<body style="background-color: rgb(195, 195, 195);">
+
+<header>
+
+    <ul class="menu align-right" style="padding-top: 4%;">
+        <li class="menu-text" style="margin-right: 50%; margin-left: 4%;"><img src="images/logo.png" style="height: 50px; padding-right: 1rem;"> Sport Zone</li>
+        <li class="menu"><a href="#">Blog</a></li>
+        <li class="menu" ><a href="#">About</a></li>
+        <li class="menu" ><a href="#">Team</a></li>
+      </ul>
+
+</header>
+
+<h2 style ="padding: 3% 10%; font-family: 'Gloock', serif;"> Our Products </h2>
+
+<div class="grid-container">
+    <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+
+      <div class="cell">
+        <div class="card">
+          <img src="images/shorts.png">
+          <div class="card-section">
+          <h4>SEAMLESS SHORTS</h4>
+            <p>Price: $54.60 USD</p>
+            <a class="button secondary" id="desc_1"> description </a>
+            <div id="answer"></div>
+
+            <form>
+              <label for="quantity">Select Quantity:</label>
+              <input type="number" id="quantity" value="1" onchange="TotalPrice1()">
+              <p>Price: $<span id="price">60.00</span> USD</p>
+              <p >+ Taxes <em style="font-size: xx-small;">(16%)</em>: $<span id="tax">69.60</span> USD</p>
+            </form>
+            
+          </div>
         </div>
       </div>
       
-    <header>
+      <div class="cell">
+        <div class="card">
+          <img src="images/sportsbra.png">
+          <div class="card-section">
+            <h4>SPORTSBRA</h4>
+            <p>Price: $35.00 USD</p>
+            <a class="button secondary" id="desc_2"> description </a>
+            <div id="answer_2"></div>
 
-        <table> 
-            <tr>
-                <th width="40px"><img src="images/fridaPP.png"  style="height: 200px;"></th>
-                <th width="300px"><h1 style="text-align: left;">Frida Bailleres González</h1>
-                <p style="text-align: left;"><em>Student at Tecnológico de Monterrey,<strong> Computer Engineering </strong> .</em> </p> </th>
-            </tr>
-        </table>
+            <form>
+              <label for="quantity2">Select Quantity:</label>
+              <input type="number" id="quantity2" value="1" onchange="TotalPrice2()">
+              <p>Total Price: $<span id="price2">35</span>.00 USD</p>
+              <p >+ Taxes <em style="font-size: xx-small;">(16%)</em>: $<span id="tax2">40.60</span> USD</p>
+            </form>
 
+          </div>
+        </div>
+      </div>
 
-    </header>
+      <div class="cell">
+        <div class="card">
+          <img src="images/waterbottle.png">
+          <div class="card-section">
+            <h4>WATER BOTTLE</h4>
+            <p>Price: $15.00 USD</p>
+            <a class="button secondary" id="desc_3"> description </a>
+            <div id="answer_3"></div>
 
-    <hr>
-    <article> 
-        <ul>
-            <li> <strong> Matrícula: </strong> A01708633</li>
-            <li> <strong> Correo institucional: </strong> A01708633@tec.mx</li>
-            <li> <strong> Correo personal: </strong> bailleres.frida@gmail.mx</li>
-        </ul>
-    </article>
-    <hr>
-    
+            <form>
+              <label for="quantity3">Select Quantity:</label>
+              <input type="number" id="quantity3" value="1" onchange="TotalPrice3()">
+              <p>Total Price: $<span id="price3">15</span>.00 USD</p>
+              <p >+ Taxes <em style="font-size: xx-small;">(16%)</em>: $<span id="tax3">17.40</span> USD</p>
+            </form>
 
-    <table cellspacing = "5"> 
-        <tr>
-            <th width="40px">  </th>
-            <td> <a href="preguntas.html" class="button" > Preguntas Lab</a> </td>
-        </tr>
-    </table>
-
-
-    <table cellspacing = "5"> 
-      <tr>
-          <th width="40px">  </th>
-          <td> <a id="prueba" href="preguntas.html" class="button" > Preguntas Lab</a> </td>
-      </tr>
-  </table>
-  
-<footer> 
-    <div class="callout primary">
-        <h5>Framework</h5>
-        <p>Esta página web fue creada utilizando el framework <em>"Foundation"</em></p>
-        <a href="https://get.foundation/sites/docs/index.html">Documentación de Foundation</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+<footer>
+  <h5 style="text-align: center; padding-top: 2%;"> questions </h6>
 </footer>
 
+    <script  src="lab6.js" ></script>  
 </body>
 </html>
-
