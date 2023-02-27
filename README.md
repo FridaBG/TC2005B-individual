@@ -10,4 +10,6 @@ En este repositorio se encuentran todos los laboratorios y trabajos que se desar
 <li> Laboratorio 3</li>
 <li> Laboratorio 4</li>
 <li> Laboratorio 5</li>
+<li> Laboratorio 6</li>
+<li> Laboratorio 7</li>
 </ul>
