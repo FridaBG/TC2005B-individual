@@ -1,6 +1,7 @@
 //para crear el servidor es como el "create server"
 const express = require('express'); 
 const bodyParser = require('body-parser');
+const { response } = require('express');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
@@ -11,9 +12,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //tercera fucnion "next" - next le dice a express que avance hacie el siguiente middle 
 app.use((request, response, next) => {
-    console.log('Middleware! UWU');
+    console.log('Middleware!');
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
+
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
@@ -24,29 +26,29 @@ app.use((request, response, next) => {
 //agregar ruta
 //primero es la ruta y la segunda es la funcion anónima
 
-app.use('/hola', (request, response, next) => { 
+app.use('/hola', (request, response, next) => {
     response.send('Hola desde la ruta /hola');
 });
 
-app.use('/nuevo', (request, response, next)=>{
-    console.log(request.body);
-    console.log(request.body.jugador);
 
-    let html = `
-        <form action "nuevo" method= "POST">
-        <label for="jugador">Nombre del jugador: </label>
-        <input type="text" id="jugador" name="jugador">
-        <input type="submit" value="enviar">
-        </form>
-    `; 
-    response.send(html);
-})
+const hockeyRutas = require('./routes/hockey.routes');
 
-app.use( (request, response, next) =>{
-    console.log("tercer middleware");
-    //response.send('¡Hola desde el tercer middleware!'); 
+app.use('/hockey', hockeyRutas);
+
+app.use((request, response, next) => {
+    console.log("Tercer middleware");
+
+    response.status(404);
+    
+    //Envía la respuesta al cliente
+    response.send('Lo sentimos, esta ruta no existe');
 });
 
-
-//Puerto
 app.listen(3000);
+
+
+
+
+//No hay distincón entre get y post en express
+//para maejar el tipo de petición se usa el método "router"
+//cambiar ".use" por ".get", lo que psa es que cuando haces el post (click en el botón), te manda a otra de las páginas
