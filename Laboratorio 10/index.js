@@ -1,5 +1,6 @@
 
 //http es el módulo que permite crear un servidor que pueda atender peticiones http
+
 const http = require('http');
 
 const server = http.createServer( (request, response) => {    
@@ -11,7 +12,8 @@ const server = http.createServer( (request, response) => {
         response.write('<!DOCTYPE html>');
         response.write('<html>');
         response.write('<head><meta charset="utf-8"></head><body>');
-        response.write("<h1>Lectura de Signos</h1>"); 
+        response.write('<link rel="stylesheet" type="text/css" href="style.css">');
+        response.write('<h1 Signos Zodiaca'); 
         response.write('<a href="/signos">Haz click para concer más acerca de tu signo zodiacal</a>');
         response.end();
         
@@ -66,12 +68,15 @@ const server = http.createServer( (request, response) => {
         //response.write('<label for="extras">¿Con qué deseas tus chilaquiles?</label>');
         //response.write('<input type="text" id="extras" name="extras"><br><br>');
 
-        response.write('<input type="submit" value="Ordenar">');
+        response.write('<input type="submit" value="CONSULTAR">');
 
         response.write("</form>");
         response.write('</body></html>');
         response.end();
-    } else if (request.url === "/signos" && request.method === "POST") {
+    } 
+    
+    
+    else if (request.url === "/signos" && request.method === "POST") {
 
         const datos = [];
 
@@ -89,15 +94,108 @@ const server = http.createServer( (request, response) => {
             if(zodiaco === "aries") {
                 response.setHeader('Content-Type', 'text/html');
                 response.write('<!DOCTYPE html>');
-                response.write("Me caes mal");
-                response.write('<img alt="chilaquiles rojos" src="https://sazondemama.com/wp-content/uploads/2022/09/Como-hacer-la-receta-de-chilaquiles-rojos-y-cuantas-calorias-tiene-768x432.jpg">');
+                response.write('<h1>ARIES</h1>');
+                response.write('<img alt="signo de aries" src=https://asknebula.com/app/static/media/aries-large.c5d724e95ea618d7e55ac05107b6c9a0.svg>');
                 return response.end();
 
-            } else {
+            } 
+
+            else if(zodiaco === "tauro")
+            {
                 response.setHeader('Content-Type', 'text/html');
                 response.write('<!DOCTYPE html>');
-                response.write("<Eres mala onda>");
-                response.write('<img alt="chilaquiles tauro" src="https://i.pinimg.com/736x/9a/c3/2b/9ac32b9b26902dc6708d835d6b8d0954.jpg">');
+                response.write("<h1>TAURO</h1>");
+                response.write('<img alt="signo tauro" src="https://asknebula.com/app/static/media/taurus-large.3325049abfec2059ab969bfb39ec7572.svg">');
+                return response.end();
+            }
+            
+            else if(zodiaco === "geminis")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>GEMINIS</h1>");
+                response.write('<img alt="signo geminis" src="https://asknebula.com/app/static/media/gemini-large.4d8246258ab5682c2ea048e40b86c971.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "cancer")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>CANCER</h1>");
+                response.write('<img alt="signo cancer" src="https://asknebula.com/app/static/media/cancer-large.f3ebc9336ba69efb61a2f715d91f3f88.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "leo")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>LEO</h1>");
+                response.write('<img alt="signo leo" src="https://asknebula.com/app/static/media/leo-large.fff4b111ce27cc3d7655242f3cd24ee9.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "virgo")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>VIRGO</h1>");
+                response.write('<img alt="signo virgo" src="https://asknebula.com/app/static/media/virgo-large.21ce27386b8e7f2496e03b838e8cba61.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "libra")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>LIBRA</h1>");
+                response.write('<img alt="signo libra" src="https://asknebula.com/app/static/media/libra-large.68821583ca62d469ceed920ea7eb4a7f.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "escorpio")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>ESCORPIO</h1>");
+                response.write('<img alt="signo escorpio" src="https://asknebula.com/app/static/media/scorpio-large.d11994430d8e3ebddcdc0eb0d50a84ea.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "sagitario")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>SAGITARIO</h1>");
+                response.write('<img alt="signo sagitario" src="https://asknebula.com/app/static/media/sagittarius-large.1e1b84d90c87e6298fb8c3857344eca5.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "capricorno")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>CAPRICORNIO</h1>");
+                response.write('<img alt="signo capricornio" src="https://asknebula.com/app/static/media/capricorn-large.dfc9772210d77bed6eb8c12c6d8f4cd7.svg">');
+                return response.end();
+            }
+
+            else if(zodiaco === "acuario")
+            {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>ACUARIO</h1>");
+                response.write('<img alt="signo acuario" src="https://asknebula.com/app/static/media/aquarius-large.21f41d8fb4720412440e4247dc0831a7.svg">');
+                return response.end();
+            }
+
+
+            else {
+                response.setHeader('Content-Type', 'text/html');
+                response.write('<!DOCTYPE html>');
+                response.write("<h1>PISCIS</h1>");
+                response.write('<img alt="signo piscis" src="https://asknebula.com/app/static/media/pisces-large.8c948035211933ad9840a4c6c1088307.svg">');
                 return response.end();
             }
             
