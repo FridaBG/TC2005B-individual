@@ -96,6 +96,8 @@ const server = http.createServer( (request, response) => {
                 response.write('<!DOCTYPE html>');
                 response.write('<h1>ARIES</h1>');
                 response.write('<img alt="signo de aries" src=https://asknebula.com/app/static/media/aries-large.c5d724e95ea618d7e55ac05107b6c9a0.svg>');
+                response.write('<h2> Características: </h2>')
+                response.write('<p>Aries forma parte de los signos cardinales y al mismo tiempo es un signo de fuego; también es el primer signo del zodíaco, precisamente por eso, simboliza el inicio, la creación. Se caracteriza por ser una persona rebosante de energía y entusiasmo; avanzada y aventurera, adora la libertad, los retos y las nuevas ideas.</p>')
                 return response.end();
 
             } 
@@ -190,7 +192,6 @@ const server = http.createServer( (request, response) => {
                 return response.end();
             }
 
-
             else {
                 response.setHeader('Content-Type', 'text/html');
                 response.write('<!DOCTYPE html>');
@@ -200,7 +201,6 @@ const server = http.createServer( (request, response) => {
             }
             
         });
-
         
     } else {
         response.statusCode = 404;
