@@ -21,4 +21,3 @@ router.post('/nuevo', (request, response, next) => {
 });
 
 module.exports = router;
-

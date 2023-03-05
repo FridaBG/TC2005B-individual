@@ -13,8 +13,8 @@ const server = http.createServer( (request, response) => {
         response.write('<html>');
         response.write('<head><meta charset="utf-8"></head><body>');
         response.write('<link rel="stylesheet" type="text/css" href="style.css">');
-        response.write('<h1 Signos Zodiaca'); 
-        response.write('<a href="/signos">Haz click para concer más acerca de tu signo zodiacal</a>');
+        response.write('<h1> Signos Zodiacal </h1>'); 
+        response.write('<a href="/signos"> Haz click para concer más acerca de tu signo zodiacal</a>');
         response.end();
         
     } else if (request.url === "/signos" && request.method === "GET") {
@@ -94,6 +94,8 @@ const server = http.createServer( (request, response) => {
             if(zodiaco === "aries") {
                 response.setHeader('Content-Type', 'text/html');
                 response.write('<!DOCTYPE html>');
+                response.write('<html lang="en"></html>')
+                response.write('<meta charset="UTF-8">')
                 response.write('<h1>ARIES</h1>');
                 response.write('<img alt="signo de aries" src=https://asknebula.com/app/static/media/aries-large.c5d724e95ea618d7e55ac05107b6c9a0.svg>');
                 response.write('<h2> Características: </h2>')
@@ -106,6 +108,8 @@ const server = http.createServer( (request, response) => {
             {
                 response.setHeader('Content-Type', 'text/html');
                 response.write('<!DOCTYPE html>');
+                response.write('<html lang="en"></html>')
+                response.write('<meta charset="UTF-8">')
                 response.write("<h1>TAURO</h1>");
                 response.write('<img alt="signo tauro" src="https://asknebula.com/app/static/media/taurus-large.3325049abfec2059ab969bfb39ec7572.svg">');
                 return response.end();
