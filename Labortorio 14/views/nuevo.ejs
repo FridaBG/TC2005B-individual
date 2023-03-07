@@ -1,17 +1,17 @@
 <%- include('includes/head.ejs') %>
 
-<h1 class="title">Registrar nuevo perro</h1>
+<h1 class="title">Registrar tu pintura</h1>
 
-<form action="/perros/nuevo" method="POST">
+<form action="/pinturas/nuevo" method="POST">
 
-    <label for="nombre">Nombre:</label>
-    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Firulais">
+    <label for="nombre">Nombre obra:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Bauer en la...">
     <br><br>
-    <label for="raza">Raza:</label>
-    <input name="raza" id="raza" class="input is-rounded" type="text" placeholder="Firulais">
+    <label for="raza">Autor:</label>
+    <input name="autor" id="autor" class="input is-rounded" type="text" placeholder="Bauer">
     <br><br>
-    <label for="descripcion">Descripcion:</label>
-    <input name="descripcion" id="descripcion" class="input is-rounded" type="text" placeholder="Firulais">
+    <label for="descripcion">Fecha:</label>
+    <input name="fecha" id="fecha" class="input is-rounded" type="text" placeholder="00/00/00">
     <br><br>
     <input class="button is-rounded is-success" type="submit" value="Registrar">
 
