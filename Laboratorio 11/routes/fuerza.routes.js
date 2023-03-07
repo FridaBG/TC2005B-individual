@@ -1,4 +1,3 @@
-const { response } = require('express');
 const express = require('express');
 
 const router = express.Router();
@@ -22,6 +21,30 @@ router.get('/nuevo', (request, response, next) => {
     response.send(html);
 });
 
+
+router.post('/nuevo', (request, response, next) => {
+    console.log(request.body);
+    console.log(request.body.nombre);
+    console.log(request.body.correo);
+
+    let html2 = `
+        <h3> Conoce sobre nuestras diferentes alternativas de comidas</h3>
+        <form method="get" action="http://localhost:4000/fuerza/alimentacion2">
+        <button type="submit">Estandar</form>
+    
+        <form method="get" action="http://localhost:4000/fuerza/alimentacion1">
+        <button type="submit">Vegetariano</form>
+    <br>
+    `
+
+    response.send( "  <h2> FUERZA </h2> Plan de entrenamiento para: " + request.body.nombre + " <br> E-mail: " 
+    + request.body.correo + ' <br> <h3>Te recomendamos ver el siguiente video: </h3> <br> '
+     + ' <iframe width="560" height="315" + src="https://www.youtube.com/watch?v=jYwHKLo75kc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' 
+     + html2);
+
+});
+
+
 router.get('/alimentacion1', (request, response, next) => {
     
     let html3 = `
@@ -36,38 +59,19 @@ router.get('/alimentacion1', (request, response, next) => {
     response.send(html3);
 });
 
-router.get('/alimentacion2', (request, response, next) => {
-    
-    let html3 = `
-        <h3> ESTANDAR </h3>
-    
-    `;
-    response.send(html3);
-});
-
-
-
-router.post('/nuevo', (request, response, next) => {
+router.post('/alimentacion1', (request, response, next) => {
     console.log(request.body);
-    console.log(request.body.nombre);
-    console.log(request.body.correo);
 
     let html2 = `
-        <h3> Conoce sobre nuestras diferentes alternativas de comidas</h3>
-        <form method="get" action="http://localhost:3000/fuerza/alimentacion2">
-        <button type="submit">Estandar</form>
-    
-        <form method="get" action="http://localhost:3000/fuerza/alimentacion1">
-        <button type="submit">Vegetariano</form>
-    <br>
+    Hola
     `
 
-    response.send( "  <h2> FUERZA </h2> Plan de entrenamiento para: " + request.body.nombre + " <br> E-mail: " 
-    + request.body.correo + ' <br> <h3>Te recomendamos ver el siguiente video: </h3> <br> '
-     + ' <iframe width="560" height="315" + src="https://www.youtube.com/watch?v=jYwHKLo75kc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' 
-     + html2);
+    response.send(html2);
 
 });
+
+
+
 
 
 
