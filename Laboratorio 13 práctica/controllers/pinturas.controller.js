@@ -18,6 +18,6 @@ exports.post_nuevo = (request, response, next) => {
 };
 
 exports.listar = (request, response, next) => {
-    response.render('lista', { razas: Pintura.fetchAll() });
+    response.render('lista', { pinturas: Pintura.fetchAll() });
 };
 

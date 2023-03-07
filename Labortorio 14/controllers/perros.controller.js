@@ -13,15 +13,21 @@ exports.post_nuevo = (request, response, next) => {
     });
 
     perro.save();
+    request.session.ultimo_perro = perro.nombre;
 
 
     response.setHeader('Set-Cookie', 'ultimo_perro=' + perro.nombre +  '; HttpOnly'); //crear cookie
 
     response.redirect('/perros/');
+
+
 };
 
 exports.listar = (request, response, next) => {
 
+
+
+    //
     let consultas = request.get('Cookie').split(';')[0].split('=')[1] || [0] ;
 
     consultas ++;
@@ -30,6 +36,18 @@ exports.listar = (request, response, next) => {
 
     exports.log = (request.get('Cookie').split('=')[1]); //guardar cookie
 
-    response.render('lista', { razas: Perro.fetchAll() });
+    request.session.ultimo_perro; //creo que falta algo
+
+    response.render('lista', { razas: Perro.fetchAll(), ultimo_perro:request.session.ultimo_perro || '' });
 };
+
+
+exports.logout = (request, response, next) => {
+    request.session.destroy(() => {
+        response.redirect('/perros'); //Este código se ejecuta cuando la sesión se elimina.
+    });
+};
+
+
+
 
